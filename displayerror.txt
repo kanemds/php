@@ -1,0 +1,16 @@
+go to php.ini file from the current php version and find:
+
+  display_errors = Off
+
+  set to 
+
+  display_errors = on
+
+
+may need permission: 
+sudo chown -R {owner}: php.ini
+
+ sudo service apache2 restart
+
+try both fpm/php.ini and apache2/php.ini
+

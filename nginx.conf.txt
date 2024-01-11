@@ -1,0 +1,29 @@
+user www-data; // user must be the same
+
+update to 8.3-fpm, but somehow need to use php8.2-fpm.sock
+fastcgi_pass unix:/var/run/php/php8.2-fpm.sock; 
+
+http{
+server {
+
+	listen 4000;
+	root {path};
+	# Add index.php to the list if you are using PHP
+ 	index index.php index.html index.htm index.nginx-debian.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+	 location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock; 
+     }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+}
+}
+events {}	

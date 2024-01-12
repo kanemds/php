@@ -1,0 +1,3 @@
+require: generate a fatal error, the import file will stop executed.
+
+include: generate a fatal error, the warning will be issued, but the script will continue executing.

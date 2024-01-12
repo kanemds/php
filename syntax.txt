@@ -1,0 +1,44 @@
+<?= ... ?> === <?php echo ...; ?>
+
+print_r: for debugging and inspecting variable structures
+
+  Array
+(
+    [0] => one
+    [1] => two
+    [2] => three
+)
+
+
+var_dump: provides information about variable types and sizes
+
+  array(3) {
+  [0]=>
+  string(3) "one"
+  [1]=>
+  string(3) "two"
+  [2]=>
+  string(5) "three"
+}
+
+
+The use of <pre> is a common practice when debugging or displaying structured data in a more human-readable format within an HTML document.
+
+function output_print_r($value)
+{
+  echo '<pre>';
+  print_r($value);
+  echo '</pre>';
+}
+
+function output_var_dump($value)
+{
+  echo '<pre>';
+  var_dump($value);
+  echo '</pre>';
+}
+
+
+  <?= output_print_r($favorite_guitars); ?>
+  <?= output_var_dump($favorite_guitars); ?>
+

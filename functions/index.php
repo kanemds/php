@@ -30,3 +30,32 @@ function output_var_dump($value)
   var_dump($value);
   echo '</pre>';
 }
+
+function authenticate_user($email, $password)
+{
+  return $email === USER_NAME && $password === PASSWORD;
+
+  // or 
+
+  // if($email === USER_NAME && $password === PASSWORD){
+  //   return true;
+  // }
+}
+
+function redirect($url)
+{
+  header("location: $url");
+}
+
+function is_user_authenticated()
+{
+  return isset($_SESSION['email']);
+}
+
+function ensure_user_is_authenticated()
+{
+  if (!is_user_authenticated()) {
+    redirect('/session');
+    die();
+  }
+}

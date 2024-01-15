@@ -30,26 +30,3 @@ function output_var_dump($value)
   var_dump($value);
   echo '</pre>';
 }
-
-$favorite_guitars = [
-  'Vela',
-  'Explorer',
-  'Strat'
-];
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>php functions</title>
-</head>
-
-<body>
-  <?= output_print_r($favorite_guitars); ?>
-  <?= output_var_dump($favorite_guitars); ?>
-</body>
-
-</html>

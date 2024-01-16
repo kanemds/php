@@ -1,11 +1,14 @@
 <?php
 
-require('./functions.php');
+// store all the require files
+require('./app/app.php');
 
-$model = 'Hello World';
 
-$view_bag = [];
+// $data = get_data();
 
-$view_bag['title'] = 'Here is the title';
 
-view('index', $model);
+// $view_bag = [];
+
+// $view_bag['title'] = 'Here is the title';
+
+view('index', '');

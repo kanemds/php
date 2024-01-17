@@ -4,7 +4,7 @@
 require('./app/app.php');
 
 
-// $data = get_data();
+$data = get_data();
 
 
 // $view_bag = [];

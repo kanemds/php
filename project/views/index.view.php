@@ -1,3 +1,32 @@
-<div>
-  <h1><?= $model ?></h1>
-</div>
+<!-- $model from the  view function  -->
+
+<table>
+  <tr>
+    <td>Term</td>
+    <td>definition</td>
+  </tr>
+  <!-- <?php
+        foreach ($model as $each) {
+          // js each.term
+          // php $each->term
+          $term = $each->term;
+          $definition = $each->definition;
+          echo "<tr><td> $term</td><td>$definition</td></tr>";
+        }
+        ?> -->
+
+  <?php foreach ($model as $each) : ?>
+    <tr>
+      <td><?= $each->term ?></td>
+      <td><?= $each->definition ?></td>
+
+    </tr>
+  <?php endforeach; ?>
+</table>
+
+<!-- also work with if statement
+<?php if (true) : ?>
+  <body>
+    
+  </body>
+<?php endif; ?> -->

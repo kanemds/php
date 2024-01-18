@@ -9,5 +9,4 @@ $view_bag = [
 ];
 
 
-
-view('index', get_decode_json_data());
+view('index', get_terms());

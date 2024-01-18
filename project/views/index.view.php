@@ -17,7 +17,7 @@
 
   <?php foreach ($model as $each) : ?>
     <tr>
-      <td><?= $each->term ?></td>
+      <td><a href="detail.php?term=<?= $each->term ?>"><?= $each->term ?></a></td>
       <td><?= $each->definition ?></td>
 
     </tr>
@@ -27,6 +27,6 @@
 <!-- also work with if statement
 <?php if (true) : ?>
   <body>
-    
+
   </body>
 <?php endif; ?> -->

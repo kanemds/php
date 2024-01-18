@@ -7,6 +7,7 @@ if (!isset($_GET['term'])) {
   redirect('/project');
 }
 
+
 $data = get_term($_GET['term']);
 
 if ($data === false) {
@@ -15,8 +16,9 @@ if ($data === false) {
 }
 
 $term = $data->term;
+
 $view_bag = [
-  'title' => 'Decode Json Data' . $term
+  'title' => 'Decode Json Data ' . strtoupper($term)
 ];
 
 

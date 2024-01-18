@@ -45,9 +45,10 @@ function get_terms()
 
 function get_term($term)
 {
-  $terms = get_terms();
+  $data = get_terms();
 
-  foreach ($terms as $item) {
+  foreach ($data as $item) {
+
     if ($item->term === $term) {
       return $item;
     }

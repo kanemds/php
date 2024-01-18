@@ -5,6 +5,12 @@
     <td>Term</td>
     <td>definition</td>
   </tr>
+  <tr>
+    <form action="" method='GET'>
+      <input type="text" name="search" id="search">
+      <input type="button" value="search">
+    </form>
+  </tr>
   <!-- <?php
         foreach ($model as $each) {
           // js each.term
@@ -17,7 +23,10 @@
 
   <?php foreach ($model as $each) : ?>
     <tr>
-      <td><a href="detail.php?term=<?= $each->term ?>"><?= $each->term ?></a></td>
+      <!-- nginx default to look for the file if provide file path and name  -->
+      <!-- href='filepath/filename.php' -->
+      <!-- <td><a href="detail.php?term=<?= $each->term ?>"><?= $each->term ?></a></td> -->
+      <td><a href="detail?term=<?= $each->term ?>"><?= $each->term ?></a></td>
       <td><?= $each->definition ?></td>
 
     </tr>

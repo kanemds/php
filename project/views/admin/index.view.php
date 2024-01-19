@@ -13,16 +13,6 @@
     <td>definition</td>
   </tr>
 
-  <!-- <?php
-        foreach ($model as $each) {
-          // js each.term
-          // php $each->term
-          $term = $each->term;
-          $definition = $each->definition;
-          echo "<tr><td> $term</td><td>$definition</td></tr>";
-        }
-        ?> -->
-
   <?php foreach ($model as $each) : ?>
     <tr>
       <!-- nginx default to look for the file if provide file path and name  -->
@@ -34,10 +24,3 @@
     </tr>
   <?php endforeach; ?>
 </table>
-
-<!-- also work with if statement
-<?php if (true) : ?>
-  <body>
-
-  </body>
-<?php endif; ?> -->

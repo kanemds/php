@@ -91,6 +91,20 @@ function add_term($term, $definition)
   set_data($items);
 }
 
+function update_term($original_term, $new_term, $definition)
+{
+  $terms = get_terms();
+
+  foreach ($terms as $term) {
+    if ($term->term === $original_term) {
+      $term->term = $new_term;
+      $term->definition = $definition;
+      break;
+    }
+  }
+  set_data($terms);
+}
+
 
 function set_data($arr)
 {

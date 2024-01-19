@@ -1,14 +1,1 @@
-[
-  {
-    "term": "css",
-    "definition": "cascading style sheets"
-  },
-  {
-    "term": "js",
-    "definition": "javascript"
-  },
-  {
-    "term": "php",
-    "definition": "hypertext preprocessor"
-  }
-]
+[{"term":"css","definition":"cascading style sheets"},{"term":"js","definition":"javascript"},{"term":"php","definition":"hypertext preprocessor"},{"term":"json","definition":"javascript object notation"},{"term":"&lt;br\/&gt;","definition":"&lt;p&gt;hello&lt;\/p&gt;"},{"term":"&lt;p&gt;hello&lt;\/p&gt;","definition":"&lt;p&gt;hello&lt;\/p&gt;"},{"term":"&lt;a href=&#039;test&#039;&gt;Test&lt;\/a&gt;","definition":"&lt;a href=&#039;test&#039;&gt;Test&lt;\/a&gt;"},{"term":"&lt;a href=&#039;test&#039;&gt;Test&lt;\/a&gt;","definition":"&lt;a href=&#039;test&#039;&gt;Test&lt;\/a&gt;"}]

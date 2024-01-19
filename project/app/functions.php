@@ -12,6 +12,11 @@ function view($name, $model)
   require(APP_PATH . './views/layout.view.php');
 }
 
+function is_get()
+{
+  return $_SERVER['REQUEST_METHOD'] === 'GET';
+}
+
 function is_post()
 {
   return $_SERVER['REQUEST_METHOD'] === 'POST';
@@ -20,7 +25,7 @@ function is_post()
 function sanitize($value)
 {
   $trim = trim($value);
-  $temp = htmlspecialchars($trim);
+  $temp = htmlspecialchars($trim, ENT_QUOTES);
 
   if ($temp === false) {
     return '';

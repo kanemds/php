@@ -11,3 +11,20 @@ function view($name, $model)
   global $view_bag;
   require(APP_PATH . './views/layout.view.php');
 }
+
+function is_post()
+{
+  return $_SERVER['REQUEST_METHOD'] === 'POST';
+}
+
+function sanitize($value)
+{
+  $trim = trim($value);
+  $temp = htmlspecialchars($trim);
+
+  if ($temp === false) {
+    return '';
+  }
+
+  return $temp;
+}

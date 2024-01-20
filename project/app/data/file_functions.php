@@ -105,6 +105,21 @@ function update_term($original_term, $new_term, $definition)
   set_data($terms);
 }
 
+function delete_term($term)
+{
+  $terms = get_terms();
+
+  for ($i = 0; $i < count($terms); $i++) {
+    if ($terms[$i]->term === $term) {
+      unset($terms[$i]);
+      break;
+    }
+  }
+  // unset will only remove the selected index will not re-arrange
+  $new_terms = array_values($terms); // re-arrange the index order
+  set_data($new_terms);
+}
+
 
 function set_data($arr)
 {

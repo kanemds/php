@@ -15,6 +15,7 @@
   <?php foreach ($model as $each) : ?>
     <tr>
       <td><a href="edit?key=<?= $each->term ?>">Edit</a></td>
+      <td><a href="delete?key=<?= $each->term ?>">Delete</a></td>
       <td><a href="detail?term=<?= $each->term ?>"><?= $each->term ?></a></td>
       <td><?= $each->definition ?></td>
 

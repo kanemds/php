@@ -36,7 +36,15 @@ function sanitize($value)
 
 function authenticate_user($email, $password)
 {
-  return $email === USER_NAME && $password === PASSWORD;
+  $users = CONFIG['users'];
+
+  if (!isset($users[$email])) {
+    return false;
+  }
+
+  $users_password = $users[$email];
+
+  return $password === $users_password;
 }
 
 function is_user_authenticated()
@@ -47,7 +55,6 @@ function is_user_authenticated()
 function ensure_user_is_authenticated()
 {
   if (!is_user_authenticated()) {
-    redirect('/session');
-    die();
+    redirect('/project');
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-class Term
+class Term_data
 {
   public $term;
   public $definition;

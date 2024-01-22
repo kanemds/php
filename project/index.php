@@ -8,10 +8,12 @@ $view_bag = [
   'title' => 'Decode Json Data'
 ];
 
+$data = new File_data_provider(CONFIG['data_file']);
+
 if (isset($_GET['search'])) {
-  $items = search_terms($_GET['search']);
+  $items = $data->search_terms($_GET['search']);
 } else {
-  $items = get_terms();
+  $items =  $data->get_terms();
 }
 
 

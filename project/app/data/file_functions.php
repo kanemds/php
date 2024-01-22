@@ -1,5 +1,6 @@
 <?php
 
+require('classes/Term.class.php');
 // file can open: reading, reading and writing, writing etc...
 // php.net for more details
 // w or w+ : if file not exist create one, if it does clean up data
@@ -79,14 +80,17 @@ function add_term($term, $definition)
 {
   $items = get_terms();
 
-  $arr = [
-    'term' => $term,
-    'definition' => $definition
-  ];
+  // $arr = [
+  //   'term' => $term,
+  //   'definition' => $definition
+  // ];
 
-  $obj = (object) $arr;
+  // $obj = (object) $arr;
 
-  $items[] = $obj;
+  // $items[] = $obj;
+
+  // add element end of array
+  $items[] = new Term($term, $definition);
 
   set_data($items);
 }

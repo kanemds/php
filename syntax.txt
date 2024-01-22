@@ -42,3 +42,15 @@ function output_var_dump($value)
   <?= output_print_r($favorite_guitars); ?>
   <?= output_var_dump($favorite_guitars); ?>
 
+object: 
+  $myObject = new stdClass();
+  $myObject->a = 1;
+
+  var_dump($myObject);
+
+  object(stdClass)#1 (1) {
+  ["a"]=>
+  int(1)
+}
+
+in js {a:1}

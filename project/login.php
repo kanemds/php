@@ -15,7 +15,7 @@ if (is_post()) {
   // compare with data from server
   if (authenticate_user($email, $password)) {
     $_SESSION['email'] = $email;
-    redirect('/admin');
+    redirect('/project/admin');
   } else {
     $view_bag['status'] = 'Current user is not authenticated.';
   }

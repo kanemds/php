@@ -1,16 +1,9 @@
 <?php
 
-require('term_data.class.php');
+require('data_provider.class.php');
 
-class File_data_provider
+class File_data_provider extends Data_provider
 {
-  private $file_path;
-
-  function __construct($file_path)
-
-  {
-    $this->file_path = $file_path;
-  }
 
   public function get_terms()
   {
@@ -19,7 +12,7 @@ class File_data_provider
     return json_decode($json);
   }
 
-  function get_term($term)
+  public function get_term($term)
   {
     $data = $this->get_terms();
 
@@ -119,15 +112,15 @@ class File_data_provider
     //   fclose($handle);
     // }
 
-    if (!file_exists($this->file_path)) {
+    if (!file_exists($this->source)) {
       // include open and close
       // instead of w+, file_put_contents($fname, '') do the same,
       // created if not exist
       // replace '' if existed
-      file_put_contents($this->file_path, '');
+      file_put_contents($this->source, '');
     } else {
       // include open and close
-      $json = file_get_contents($this->file_path);
+      $json = file_get_contents($this->source);
     }
 
     return $json;
@@ -138,6 +131,6 @@ class File_data_provider
 
     $json = json_encode($arr);
 
-    file_put_contents($this->file_path, $json);
+    file_put_contents($this->source, $json);
   }
 }

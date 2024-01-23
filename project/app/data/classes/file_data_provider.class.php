@@ -1,6 +1,6 @@
 <?php
 
-require('data_provider.class.php');
+// require('data_provider.class.php');
 
 class File_data_provider extends Data_provider
 {

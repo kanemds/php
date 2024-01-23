@@ -7,4 +7,4 @@ ensure_user_is_authenticated();
 
 
 
-view('admin/index', get_terms());
+view('admin/index', Data::get_terms());

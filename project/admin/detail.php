@@ -10,7 +10,7 @@ if (!isset($_GET['term'])) {
 }
 
 
-$data = get_term($_GET['term']);
+$data = Data::get_term($_GET['term']);
 
 if ($data === false) {
 

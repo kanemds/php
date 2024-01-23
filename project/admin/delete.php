@@ -14,7 +14,7 @@ if (is_get()) {
     die();
   }
 
-  $term = get_term($key);
+  $term = Data::get_term($key);
 
   if ($term === false) {
     echo 'term not found';
@@ -30,7 +30,7 @@ if (is_post()) {
   if (empty($term)) {
     echo 'Missing one of the field';
   } else {
-    delete_term($term);
+    Data::delete_term($term);
     redirect('/project/admin');
   }
 }

@@ -1,0 +1,5 @@
+Public: Public members (properties and methods) can be accessed from outside the class, from within the class, and by subclasses.
+
+Protected: Protected members can be accessed within the class and by its subclasses (child classes). They cannot be accessed directly from outside the class hierarchy.
+
+Private: Private members can only be accessed within the class itself. They are not accessible in subclasses.

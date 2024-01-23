@@ -1,13 +1,14 @@
 <?php
 
+
 class Data
 {
 
   static private $ds;
-
-  static public function initialize($data_provider)
+  //  type hint: only taking data from Data_provider class can pass into this static members
+  static public function initialize(Data_provider $data_providers)
   {
-    return self::$ds = $data_provider;
+    return self::$ds = $data_providers;
   }
 
   static public function get_terms()

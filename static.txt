@@ -1,0 +1,11 @@
+
+In PHP, the static keyword is used to declare class members (properties or methods) that are associated with the class itself rather than with instances of the class. This means that you can access static members without creating an instance of the class.
+
+create a static members
+Data::initialize(new File_data_provider(CONFIG['data_file']));
+
+access the property and method using the class name without creating an instance of the class.
+echo Data::$ds;
+
+create an instance class 
+$data = new File_data_provider(CONFIG['data_file']);

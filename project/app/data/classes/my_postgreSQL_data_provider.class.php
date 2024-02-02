@@ -1,17 +1,8 @@
 <?php
 
-// reason leave empty because of api call can have different requirement, it can be replace by extends when empty
 
-require('term_data.class.php');
-
-class Data_provider
+class My_postgreSQL_data_provider extends Data_provider
 {
-  protected $source;
-
-  function __construct($source)
-  {
-    $this->source = $source;
-  }
 
   public function get_terms()
   {

@@ -15,7 +15,7 @@ try {
   // Create a new PDO instance
   // $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password");
   $pdo = new PDO($dsn, $dbusername, $dbpassword);
-  var_dump($pdo);
+
   // Set the PDO error mode to exception
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -23,7 +23,9 @@ try {
   $statement = $pdo->query($sql);
   $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-  var_dump($result);
+
+  $jsonData = json_encode($result);
+  var_dump($jsonData);
 } catch (PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
   die(); // Exit the script in case of connection failure

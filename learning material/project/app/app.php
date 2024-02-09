@@ -19,6 +19,9 @@ require('data/classes/data.class.php');
 // require('data/file_functions.php'); // normal function file
 require('data/classes/file_data_provider.class.php'); // using class obj
 
+require('data/classes/my_postgreSQL_data_provider.class.php');
 
 
-Data::initialize(new File_data_provider(CONFIG['data_file']));
+
+
+Data::initialize(new My_postgreSQL_data_provider(CONFIG['data_file']));
